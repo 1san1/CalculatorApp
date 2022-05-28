@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container theme1 theme2 theme3">
+      <div class="heading color-toggle">
+        <p class="title1">calc</p>
+        <div class="theme">
+          <p>Theme</p>
+          <section class="custom-radio">
+            <div class="numbers">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <div class="square-radiob">
+              <button id="one" value="1" onClick="change(this.id)"></button>
+              <button id="two" value="2" onClick="change(this.id)"></button>
+              <button id="three" value="3" onClick="change(this.id)"></button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <input class="input1" id="input1" value="" type="text" value="" />
+      <div class="number-dial">
+        <div class="top-key small-width-box">
+          <div class="first-row rows">
+            <input
+              class="enterNum"
+              type="button"
+              value="7"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="8"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="9"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              id="del"
+              class="enterNum del"
+              type="button"
+              value="del"
+              onclick="deleted()"
+            />
+          </div>
+          <div class="second-row rows">
+            <input
+              class="enterNum"
+              type="button"
+              value="4"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="5"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="6"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="+"
+              onclick="entryInput(this.value)"
+            />
+          </div>
+          <div class="third-row rows">
+            <input
+              class="enterNum"
+              type="button"
+              value="1"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="2"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="3"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="-"
+              onclick="entryInput(this.value)"
+            />
+          </div>
+          <div class="fourth-row rows">
+            <input
+              class="enterNum"
+              type="button"
+              value="."
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="0"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="/"
+              onclick="entryInput(this.value)"
+            />
+            <input
+              class="enterNum"
+              type="button"
+              value="×"
+              onclick="entryInput(`*`)"
+            />
+          </div>
+        </div>
+        <div class="bottom-key big-width-box">
+          <input id="reset" type="button" value="reset" onclick="reset()" />
+          <input id="equal" type="button" value="=" onclick="answer()" />
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+
+  <script type="text/javascript" src="./index.js"></script>
+</html>

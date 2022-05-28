@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  /* theme1 */
+  /* background */
+  --theme1-mainBg: hsl(222, 26%, 31%);
+  --theme1-togg-keypad-bg: hsl(223, 31%, 20%);
+  --theme1-scr-bg: hsl(224, 36%, 15%);
+  /* keys */
+  --theme1-keys-bg: hsl(225, 21%, 49%);
+  --theme1-keys-shadow: hsl(224, 28%, 35%);
+  --theme1-key-tog-bg: hsl(6, 63%, 50%);
+  --theme1-key-shadow1: hsl(6, 70%, 34%);
+  --theme1-key-bg: hsl(30, 25%, 89%);
+  --theme1-key-shadow: hsl(28, 16%, 65%);
+  /* text */
+  --theme1-text-b: hsl(221, 14%, 31%);
+  --theme1-text-white: white;
+  --theme1-text-header: white;
+  --theme1-text-eq: white;
+
+  /* theme2 */
+  /* background */
+  --theme2-mainBg: hsl(0, 0%, 90%);
+  --theme2-togg-keypad-bg: hsl(0, 5%, 81%);
+  --theme2-scr-bg: hsl(0, 0%, 93%);
+  /* keys */
+  --theme2-keys-bg: hsl(185, 42%, 37%);
+  --theme2-keys-shadow: hsl(185, 58%, 25%);
+  --theme2-key-tog-bg: hsl(25, 98%, 40%);
+  --theme2-key-shadow1: hsl(25, 99%, 27%);
+  --theme2-key-bg: hsl(45, 7%, 89%);
+  --theme2-key-shadow: hsl(35, 11%, 61%);
+  /* text */
+  --theme2-text-b: hsl(60, 10%, 19%);
+  --theme2-text-white: white;
+  --theme2-text-header: hsl(60, 10%, 19%);
+  --theme2-text-eq: white;
+
+  /* theme3 */
+  /* background */
+  --theme3-mainBg: hsl(268, 75%, 9%);
+  --theme3-togg-keypad-bg: hsl(268, 71%, 12%);
+  --theme3-scr-bg: hsl(268, 71%, 12%);
+  /* keys */
+  --theme3-keys-bg: hsl(281, 89%, 26%);
+  --theme3-keys-shadow: hsl(285, 91%, 52%);
+  --theme3-key-tog-bg: hsl(176, 100%, 44%);
+  --theme3-key-shadow1: hsl(177, 92%, 70%);
+  --theme3-key-bg: hsl(268, 47%, 21%);
+  --theme3-key-shadow: hsl(290, 70%, 36%);
+  /* text */
+  --theme3-text-b: hsl(52, 100%, 62%);
+  --theme3-text-white: hsl(52, 100%, 62%);
+  --theme3-text-header: hsl(52, 100%, 62%);
+  --theme3-text-eq: hsl(60, 10%, 19%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--theme1-mainBg);
+  font-family: "League Spartan", sans-serif;
+}
+.container {
+  /* border: 2px solid red; */
+  width: 300px;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "input-section"
+    "main-button"
+    "control-button";
+  margin: 20px auto auto auto;
+}
+
+.heading {
+  background: var(--theme1-mainBg);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 5px; */
+  padding: 5px;
+  color: var(--theme1-text-header);
+  margin-bottom: 10px;
+}
+p {
+  align-self: flex-end;
+}
+.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.title1 {
+  margin-bottom: 5px;
+}
+.theme p {
+  font-size: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.input1 {
+  grid-area: input-section;
+  height: 60px;
+  background: var(--theme1-scr-bg);
+  color: var(--theme1-text-header);
+  border-color: var(--theme1-scr-bg);
+  text-align: right;
+  font-size: 32px;
+  width: 99%;
+  /* padding-right: 10px; */
+}
+
+.number-dial {
+  margin-top: 5px;
+  background: var(--theme1-togg-keypad-bg);
+  /* border: 2px solid violet; */
+  border-radius: 5px;
+  padding: 5px;
+}
+.small-width-box {
+  /* border: 2px solid green; */
+  grid-area: main-button;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  gap: 10px;
+}
+.rows {
+  display: flex;
+  gap: 10px;
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
+}
+.top-key input {
+  flex: 1 1 25%;
+  border: var(--theme1-key-bg);
+  background: var(--theme1-key-bg);
+  box-shadow: 0px 0.5px var(--theme1-key-shadow);
+  text-transform: uppercase;
+  color: var(--theme1-text-b);
+}
+.big-width-box {
+  grid-area: control-button;
+  display: flex;
+  margin-top: 10px;
+  /* justify-content: space-between; */
+  margin: 5px;
+  gap: 10px;
+  /* gap: 5px; */
+  /* border: 2px green solid; */
+}
+.bottom-key input {
+  flex: 1 1 50%;
+  border: var(--theme1-key-bg);
+  text-transform: uppercase;
+  /* border: none; */
+}
+#equal {
+  background: var(--theme1-key-tog-bg);
+  box-shadow: 0px 1px var(--theme1-key-shadow1);
+
+  color: var(--theme1-text-eq);
+}
+#reset,
+#del {
+  background: var(--theme1-keys-bg);
+  box-shadow: 0px 1px var(--theme1-keys-shadow);
+  color: white;
+  font-size: large;
+}
+
+input {
+  border-radius: 5px;
+}
+.number-dial input {
+  /* margin: 1px; */
+  height: 35px;
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* .rows2 {
+  margin: 5px;
+} */
+
+/* custom radio button made by Sanjog Hamal */
+.custom-radio {
+  width: 60px;
+  /* border: 2px solid red; */
+  /* background: darkgray; */
+}
+.numbers {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  margin: auto 5px;
+  font-size: 0.8em;
+}
+.custom-radio button {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  background: var(--theme1-togg-keypad-bg);
+  margin: 2px;
+  cursor: pointer;
+}
+
+.square-radiob {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid green; */
+  background: var(--theme1-togg-keypad-bg);
+  height: 20px;
+  border-radius: 20px;
+  /* margin: 5px; */
+}
+#one {
+  background: var(--theme1-key-tog-bg);
+}
+
+.custom-radio button:hover,
+input:hover {
+  filter: brightness(110%);
+}
